@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoselector</title>
+</head>
+<style>
+    p::after{
+        content: " content added after to para ";
+        color:red;
+    }
+
+    p::before{
+        content: "content added before to para ";
+        color:green;
+    }
+</style>
+<body>
+    <div>
+
+        <p>This is paragraph element</p>
+    </div>
+</body>
+</html>
