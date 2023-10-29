@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form>
+   <label for="name">Name:</label> <input type="textfield" name="name" id="name">
+   <label for="name">Age:</label> <input type="textfield" name="age">
+  <input type="submit" onclick="msg(document.getElementById('name').value);">
+   </form> 
+</body>
+<script>
+function msg(n){
+    alert("Hello You "+ n +"!!");
+}
+</script>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+</head>
+<style>
+    #n{
+        width:1.15cm;
+    }
+    #div{
+        width:1.13cm;
+        margin-left: 0.1cm;
+    }
+    #box{
+        margin-top: 8cm;
+        margin-left: 18cm;
+ 
+
+    }
+    #sol{
+        margin-top: 1cm;
+        margin-left: 1.4cm;
+    }
+
+   
+</style>
+<body>
+   
+    <div id="box">
+        <div><button id="z" onclick="get(document.getElementById('z').value);" value="0">0</button>
+            <button id="o" onclick="get(document.getElementById('o').value);" value="1">1</button>
+            <button id="t"onclick="get(document.getElementById('t').value);"  value="2">2</button>
+            <button id="clr" onclick="clr();">CLR</button>
+        </div>
+
+        <div><button id="th" onclick="get(document.getElementById('th').value);" value="3">3</button>
+            <button id="f" onclick="get(document.getElementById('f').value);" value="4">4</button>
+            <button id="fv"onclick="get(document.getElementById('fv').value);"  value="5">5</button>
+            <button id="ans" onclick="eval();">ANS</button>
+        </div>
+
+        <div><button id="s"onclick="get(document.getElementById('s').value);"  value="6">6</button>
+            <button id="sv" onclick="get(document.getElementById('sv').value);" value="7">7</button>
+            <button id="e" onclick="get(document.getElementById('e').value);" value="8">8</button>
+            <button id="n" onclick="get(document.getElementById('n').value);" value="9">9</button>
+        </div>
+        
+      <div id="op"> <button id="add" onclick="op('add');">+</button>
+        <button id="sub" onclick="op('sub');">-</button>
+        <button id="mul" onclick="op('mul');">*</button>
+        <button id="div" onclick="op('div');">/</button>
+
+    </div> 
+    <div id="sol"></div>
+    </div>
+
+
+    
+
+</body>
+
+<script>
+    document.getElementById('f').addEventListener("click",(e)=>{e.preventDefault()});
+    var a,b;var t=1,x;
+
+    function op(opt){
+        x=opt;
+    }
+    function get(n){
+        if(t==1){
+            a=n;t=0;
+        }
+            
+        else
+           b=n;
+    }
+
+    function eval(){
+        res=0;
+        if(x==null)alert("choose operator");
+
+        else{
+            if(x==="add")res=parseInt(a)+parseInt(b);
+
+            else if(x==="sub")res=a-b;
+
+            else if(x==="mul")res=a*b;
+
+            else res=a/b;
+        }
+        console.log(
+            a +" " +b +" "+ x + " =" + res
+        )
+        document.getElementById("sol").innerHTML=res;
+    }
+
+    function clr(){
+        document.getElementById("sol").innerHTML="";
+        t=1;
+
+    }
+
+    
+  
+    </script>
+</html>

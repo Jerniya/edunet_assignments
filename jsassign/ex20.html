@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAlCi</title>
+</head>
+<body>
+    <form id="f">
+        <label for="name">VALUE A:</label> <input type="textfield" id="a">
+        <label for="name">VALUE B:</label> <input type="textfield" id="b">
+       <button  onclick="msg(document.getElementById('a').value,document.getElementById('b').value,'ad');">ADD </button>
+       <button  onclick="msg(document.getElementById('a').value,document.getElementById('b').value,'sb');">SUB </button>
+       <button  onclick="msg(document.getElementById('a').value,document.getElementById('b').value,'ml');">MUL </button>
+       <button  onclick="msg(document.getElementById('a').value,document.getElementById('b').value,'dv');">DIV </button>
+        </form> 
+
+        <div id="l"></div>
+</body>
+<script>
+    document.getElementById('f').addEventListener("click",(e)=>{e.preventDefault()});
+    function msg(a,b,op){
+       var ans;
+
+if(op==="ad")ans=parseInt(a)+parseInt(b);
+
+else if(op==="sb")ans=a-b;
+
+else if(op==="ml")ans=a*b;
+
+else ans=a/b;
+
+
+
+
+
+        document.getElementById("l").innerHTML="Answer is "+ans+"!!.....";
+    }
+    </script>
+
+</html>

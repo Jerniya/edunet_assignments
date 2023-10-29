@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="f">
+        <label for="name">College Name:</label> <input type="textfield" name="name" id="name">
+        <label for="name">Branch:</label> <select id="slct"><option name="a">ARTS</option>
+            <option name="b">COMMERCE</option>
+            <option name="c">SCIENCE</option>
+        </select>
+       <input type="submit" onclick="msg(document.getElementById('slct').value);">
+        </form> 
+
+        <div id="l">
+            
+        </div>
+</body>
+<script>
+    document.getElementById('f').addEventListener("click",(e)=>{e.preventDefault()});
+    function msg(n){
+        console.log(n);
+        document.getElementById("l").innerHTML="Welcome You from the department  "+n+"!!.....";
+    }
+    </script>
+</html>
