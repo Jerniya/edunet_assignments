@@ -1,0 +1,129 @@
+*{
+    padding:0cm;
+    margin:0cm;
+    box-sizing: border-box;
+
+    font-family: 'Dancing Script', cursive;
+    background-color: black;
+}
+
+#sidepanel a{
+   
+    background-color: rgb(72, 41, 72);
+    padding: 1.5cm;color: white;
+    
+    text-align: center;
+   
+}
+#sidepanel{
+    height: 100%;
+    width:15%;
+    width:max-content;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:flex-start;
+    
+ float: left;
+ position: fixed;
+    background-color: rgb(72, 41, 72);
+}
+
+#footer{
+    position: fixed;
+    width:87%;
+  left:12.7%;
+    bottom: 0;
+  
+    
+   
+
+    height:4.4cm;
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    background-color:black;
+}
+
+#ma h1,h3,h2,h4,h5{ 
+    text-align: center;
+    display: block;
+    color:white;
+    padding: 0.3cm;
+    margin-left: 4cm;
+}
+#ma #jer{
+   font-size: 1.5cm;
+    color:deeppink;
+    animation:jer 4s infinite;
+}
+
+#ma h4{
+    color:rgb(150, 150, 117);
+}
+@keyframes jer{
+    10%{
+        text-shadow: 0cm 4cm 0.5cm 0cm plum;
+         color:deeppink;
+    }
+    25%{
+        text-shadow: 0cm 4cm 0.5cm 0cm gray;
+        color:rgb(85, 43, 43);
+    }
+    40%{
+        text-shadow: 0cm 4cm 0.5cm 0cm palevioletred;
+        color:lightskyblue;
+      
+       
+    }
+    50%{
+        text-shadow: 0cm 4cm 0.5cm 0cm gray;
+        color:rgb(176, 240, 176);
+    }
+
+    60%{
+        text-shadow: 0cm 4cm 0.5cm 0cm gray;
+        color:deeppink;
+    }
+    80%{
+        text-shadow: 0cm 4cm 0.5cm 0cm gray;
+        color:peru;
+    }
+    100%{
+        text-shadow: 0cm 4cm 0.5cm 0cm purple;
+        color:lightskyblue;
+    }
+
+}
+#ma button{
+    margin-left: 20cm;
+    margin-top: 2cm;
+    width:4cm;
+    height:1cm;
+    background-color: rgb(72, 41, 72);
+    color: white;
+    border:3px dotted whitesmoke;
+    box-shadow: 0px 4px 10px 0cm grey;
+    transition: all 0.3s ease-in-out;
+}
+
+.bi-hand-index-thumb{
+  background-color: inherit;
+}
+
+#ma button:hover{
+    box-shadow: 0px 0px 30px grey;
+}
+
+
+#footer a{
+    padding:0.8cm;
+
+}
+
+#footer p{
+    margin:3cm;
+    color:grey;
+}
